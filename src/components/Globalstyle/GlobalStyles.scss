@@ -1,0 +1,39 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+:root {
+    --primary-color: rgb(255, 124, 77); 
+    --black-color: #000; 
+    --color-hover: rgba(22, 24, 35, 0.03); 
+    --font-family: 'Outfit', 'Roboto', sans-serif;
+    --text-color: rgb(21, 58, 67);
+    --background-color: rgb(252, 251, 250);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-family: 'Outfit', 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: #f4f4f4;
+}
+
+button, input, [tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    // color: var(--text-color);
+    text-decoration: none;
+}

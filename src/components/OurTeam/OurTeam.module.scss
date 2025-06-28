@@ -1,0 +1,92 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1024px;
+    padding: 128px 0;
+
+}
+
+.content {
+    display: inline-block;
+    font-size: 5.2rem;
+    line-height: 1.2;
+    color: var(--text-color);
+    font-weight: 800;
+    text-align: center;
+}
+
+.img1 {
+    border-radius: 12px;
+    transform-origin: 50%;
+    object-fit: cover;
+    background-image: url('https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffe03818196b62015f46_95f3e543daf5a38d2dfb07b450872c35_vorunteer.avif');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2em;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-bottom: 1em;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    bottom: -.25em;
+}
+
+.img2 {
+    border-radius: 12px;
+    transform-origin: 50%;
+    object-fit: cover;
+    background-image: url('https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffdfb0c5bfcf76c27549_6537043b66a7bf3913dd28a02a0c43df_women.avif');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2em;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-bottom: 1em;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    bottom: -.25em;
+}
+
+.img3 {
+    border-radius: 12px;
+    transform-origin: 50%;
+    object-fit: cover;
+    background-image: url('https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6814ed06e370511f24fd8c62_voollunteer.avif');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2em;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-bottom: 1em;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    bottom: -.25em;
+}
+
+.button {
+    margin-top: 32px;
+    background-color: var(--text-color);
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 32px;
+
+    &:hover {
+        box-shadow: 2px 2px 14px 2px #0003;
+    }
+}
+

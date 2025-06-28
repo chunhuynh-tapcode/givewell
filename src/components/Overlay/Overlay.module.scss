@@ -1,0 +1,60 @@
+.wrapper {
+    display: block;
+    margin: 0 32px;
+    
+}
+
+.overlay {
+    position: relative;
+    height: calc(100vh - 10rem);
+
+}
+
+.overlay-background {
+    height: 100%;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.dark-gradient {
+    z-index: 1;
+    background-image: linear-gradient(#153a4300 65%, #000c);
+    position: absolute;
+    inset: 0%;
+    border-radius: 20px;
+}
+
+.overlay-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0 24px;
+    bottom: 32px;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 2;
+
+}
+
+.overlay-name {
+    font-size: clamp(3rem, 15vw, 30rem);
+    text-rendering: optimizelegibility;
+    font-weight: 900;
+    color: var(--primary-color);
+    line-height: 0.8;
+}
+
+.overlay-description {
+    width: 25%;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #fff;
+}

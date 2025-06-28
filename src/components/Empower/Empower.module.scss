@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    height: 700px;
+    background-color: #efeae7;
+    border-radius: 20px;
+}
+
+.container {
+    padding: 0 40px;
+    width: 100%;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 550;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.list {
+    list-style: none;
+}
+
+.item-group {
+    width: 100%;
+    border-bottom: #000 solid 1px;
+}
+
+.item {
+    font-size: 4rem;
+    margin-top: 20px;
+    padding-bottom: 20px; 
+    color: rgba(21, 58, 67);
+    font-weight: 700;
+}
