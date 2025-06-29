@@ -1,9 +1,31 @@
 import styles from './OurVision.module.scss';
 import classNames from 'classnames/bind';
 
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+
+
 const cx = classNames.bind(styles);
 
 function OurVision() {
+    const ref = useRef(null)
+
+    const { scrollYProgress } = useScroll({ 
+        target: ref,
+        offset: ['start start', 'end start'] 
+    });
+
+    // Scale ảnh mid từ 1 => 1.5
+    const scaleMid = useTransform(scrollYProgress, [0, 0.3], [1, 3]);
+
+    const width = useTransform(scrollYProgress, [0, 1], ['50vw', '100vw']);
+    const height = useTransform(scrollYProgress, [0, 1], ['50vh', '100vh']);
+
+    // Left & Right translate ra ngoài màn
+    const leftX = useTransform(scrollYProgress, [0, 0.3], [0, -300]); // -300px sang trái
+    const rightX = useTransform(scrollYProgress, [0, 0.3], [0, 300]); // +300px sang phải
+
+
     return ( 
         <div className={cx('wrapper')} id={cx('ourvision')}>
             <div className={cx('container')}>
@@ -59,29 +81,33 @@ function OurVision() {
                         <p className={cx('content-container-description')}>Our work is grounded in the belief that small actions can spark lasting change. As the world evolves, we stay committed to uplifting efforts that empower and connect. We act not out of duty, but from a deep hope for a better tomorrow — whatever shape it takes.</p>                       
                     </div>
 
-                    <div className={cx('img-container')}>
-                        <div className={cx('left')}>
-                            <div className={cx('img-outside-wrapper')}>
-                                <img className={cx('img-outside-left')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffe03818196b62015f46_95f3e543daf5a38d2dfb07b450872c35_vorunteer.avif'></img>
+                    <div>
+                        <div className={cx('img-container')}>
+                            <div className={cx('left')}>
+                                <div className={cx('img-outside-wrapper')}>
+                                    <img className={cx('img-outside-left')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffe03818196b62015f46_95f3e543daf5a38d2dfb07b450872c35_vorunteer.avif'></img>
+                                </div>
+                                <div className={cx('img-inside-container')}>
+                                    <img className={cx('img-inside')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffee6eb903adc094bebc_hands.jpg'></img>
+                                    <img className={cx('img-inside')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffee889d0124b11eae39_beach.jpg'></img>
+                                </div>
                             </div>
-                            <div className={cx('img-inside-container')}>
-                                <img className={cx('img-inside')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffee6eb903adc094bebc_hands.jpg'></img>
-                                <img className={cx('img-inside')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffee889d0124b11eae39_beach.jpg'></img>
-                            </div>
-                        </div>
 
-                        <div className={cx('mid')}>
-                            <img className={cx('img-mid')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffe302807dde3a379dd0_main.jpg'></img>
-                        </div>
+                            <div className={cx('mid')}>
+                                <img className={cx('img-mid')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffe302807dde3a379dd0_main.jpg'></img>
+                            </div>
 
-                        <div className={cx('right')}>
-                            <div className={cx('img-inside-container')}>
-                                <img className={cx('img-inside')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6814e9b77d6ed66d66f862f7_vorunteer.jpg'></img>
-                                <img className={cx('img-inside')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffe21856da388475af67_volunteers.jpg'></img>
+                            <div className={cx('right')}>
+                                <div className={cx('img-inside-container')}>
+                                    <img className={cx('img-inside')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6814e9b77d6ed66d66f862f7_vorunteer.jpg'></img>
+                                    <img className={cx('img-inside')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffe21856da388475af67_volunteers.jpg'></img>
+                                </div>
+                                <div className={cx('img-outside-wrapper')}>
+                                    <img className={cx('img-outside-right')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffe3de878931a9ff5279_19770a54b0777584a4ccad223ba87a44_packing.avif'></img>
+                                </div>
                             </div>
-                            <div className={cx('img-outside-wrapper')}>
-                                <img className={cx('img-outside-right')} src='https://cdn.prod.website-files.com/68011fed23249a9699d7b42b/6802ffe3de878931a9ff5279_19770a54b0777584a4ccad223ba87a44_packing.avif'></img>
-                            </div>
+
+
                         </div>
                     </div>
                 </div>

@@ -5,6 +5,8 @@ const cx = classNames.bind(styles);
 
 function Empower() {
     return ( 
+        
+
         <div className={cx('wrapper')} id={cx('empower')}>
             <div className={cx('section')}>
                 <div className={cx('container')}>

@@ -55,8 +55,14 @@
     color: var(--text-color)
 }
 
+.desciption-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+}
+
 .counting {
-    text-align: end;
     font-size: clamp(3rem, 10vw, 15rem);
     font-weight: 700;
     color: var(--text-color)

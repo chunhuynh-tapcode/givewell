@@ -1,10 +1,18 @@
 import styles from './OurImpact.module.scss'
 import classNames from 'classnames/bind';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
 
 const cx = classNames.bind(styles)
 
 
 function OurImpact() {
+    const { ref, inView } = useInView({
+        triggerOnce: true, // chỉ chạy 1 lần
+        threshold: 0.5,     // 50% phần tử nằm trong viewport
+    });
+
     return ( 
         <div className={cx('wrapper')} id={cx('ourimpact')}>
             <div className={cx('top')}> 
@@ -24,8 +32,9 @@ function OurImpact() {
                             <p className={cx('sub-title')}>Projects supported through local programs</p>
                         </div>
 
-                        <div>
-                            <p className={cx('counting')}>256</p>
+                        <div className={cx('desciption-wrapper')} ref={ref}>
+                            <CountUp className={cx('counting')} start={inView ? 0 : null} end={256} duration={2} separator="," />
+
                             <div className={cx('content')}>
                                 <p>Over 25,000 people directly supported through community programs, crisis response, and ongoing care initiatives.</p>
                             </div>
@@ -46,8 +55,9 @@ function OurImpact() {
                                     <p className={cx('sub-title')}>Volunteer & Project Support</p>
                                 </div>
 
-                                <div>
-                                    <p className={cx('counting')}>120+</p>
+                                <div className={cx('desciption-wrapper')} ref={ref}>
+                                    <CountUp className={cx('counting')} start={inView ? 0 : null} end={120} suffix={'+'} duration={2} separator="," />
+                                    
                                     <div className={cx('content')}>
                                         <p>120+ local volunteers mobilized across 60+ grassroots projects in the past year.</p>
                                     </div>
@@ -67,8 +77,9 @@ function OurImpact() {
                                     <p className={cx('sub-title')}>Resource Distribution</p>
                                 </div>
 
-                                <div>
-                                    <p className={cx('counting')}>85%</p>
+                                <div className={cx('desciption-wrapper')} ref={ref}>
+                                    <CountUp className={cx('counting')} start={inView ? 0 : null} end={85} suffix={'%'} duration={2} separator="," />
+
                                     <div className={cx('content')}>
                                         <p>of every dollar goes directly to on-the-ground efforts, tools, and services making a difference where it’s needed most.</p>
                                     </div>
