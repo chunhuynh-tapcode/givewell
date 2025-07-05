@@ -16,32 +16,32 @@ function OurMission() {
 
     // Animation cho H1
     const line1Props = useSpring({
-        opacity: inView ? 1 : 0,
+        opacity: inView ? 1 : 0.2,
         config: { tension: 120, friction: 20 },
         delay: 300
     });
     const line2Props = useSpring({
-        opacity: inView ? 1 : 0,
+        opacity: inView ? 1 : 0.2,
         config: { tension: 120, friction: 20 },
         delay: 400
     });
     const line3Props = useSpring({
-        opacity: inView ? 1 : 0,
+        opacity: inView ? 1 : 0.2,
         config: { tension: 120, friction: 20 },
         delay: 500
     });
     const line4Props = useSpring({
-        opacity: inView ? 1 : 0,
+        opacity: inView ? 1 : 0.2,
         config: { tension: 120, friction: 20 },
         delay: 600
     });
     const line5Props = useSpring({
-        opacity: inView ? 1 : 0,
+        opacity: inView ? 1 : 0.2,
         config: { tension: 120, friction: 20 },
         delay: 700
     });
     const line6Props = useSpring({
-        opacity: inView ? 1 : 0,
+        opacity: inView ? 1 : 0.2,
         config: { tension: 120, friction: 20 },
         delay: 800
     });
